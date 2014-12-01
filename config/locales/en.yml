@@ -1,0 +1,22 @@
+en:
+  session:
+    failed-to-login: "Wrong nickname or password. Try again."
+    log-in: "Login"
+  user:
+    new:
+      registr: "Registration"
+  activerecord:
+    User:
+      nick: "Nickname"
+      pass: "Password"
+      email: "Email"
+      birth: "Your birth date"
+      lang: "Language you speak"
+  errors:
+    prohibited: "prohibited this user from being saved"
+    error: "error"
+  langs:
+    none: "none"
+    ukr: "Ukrainian"
+    eng: "English"
+    ru: "Russian"

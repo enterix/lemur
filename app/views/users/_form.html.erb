@@ -1,0 +1,32 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, t("errors.error")) %> <%= t "errors.prohibited" %>:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.label(:nick, t("activerecord.User.nick")) %>
+    <%= f.text_field(:nick) %>
+
+    <%= f.label(:pass, t("activerecord.User.pass")) %>
+    <%= f.password_field(:pass) %>
+
+    <%= f.label(:email, t("activerecord.User.email")) %>
+    <%= f.text_field(:email) %>
+
+    <%= f.label(:birth, t("activerecord.User.birth")) %>
+    <%= f.date_select(:birth) %>
+
+    <%= f.label(:lang, t("activerecord.User.lang")) %>
+    <%= lang_tag(:lang) %>
+
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<%= form_tag("/sessions", method: "post") do %>
+    <% if notice %>
+        <p id="notice"><%= notice %></p>
+    <% end %>
+
+    <%= label_tag(:nick, t("activerecord.User.nick")) %>
+    <%= text_field_tag(:nick) %>
+    <%= label_tag(:pass, t("activerecord.User.pass")) %>
+    <%= password_field_tag(:pass) %>
+    <%= submit_tag(t("session.log-in")) %>
+<% end %>
