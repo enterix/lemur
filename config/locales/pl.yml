@@ -1,4 +1,5 @@
-en:
+#wrong one, delete pls
+pl:
   session:
     failed-to-login: "Wrong nickname or password. Try again."
     log-in: "Login"
@@ -6,28 +7,15 @@ en:
     new:
       registr: "Registration"
   activerecord:
-    attributes:
-      user:
-        nick: "Nickname"
-        pass: "Password"
-        email: "Email"
-        birth: "Your birth date"
-        lang: "Language you speak"
-    errors:
-      models:
-        user:
-          attributes:
-            birth:
-              before: "is not valid"
-            nick:
-              only_letters_and_digits: "accepts only letters or digits"
-              is_using: "is already in use"
-            email:
-              incorrect_mail: "is not valid"
-              is_using: "is already used for another account"
-            pass:
-              should_be_different_with_nickname: "should be different"
-
+    User:
+      nick: "Nickname"
+      pass: "Password"
+      email: "Email"
+      birth: "Your birth date"
+      lang: "Language you speak"
+  errors:
+    prohibited: "prohibited this user from being saved"
+    error: "error"
   langs:
     none: "none"
     ukr: "Ukrainian"
@@ -135,8 +123,12 @@ en:
   errors:
     format: ! '%{attribute} %{message}'
     error: "error"
-    prohibited: "prohibited this user from being saved"
     messages:
+      only_letters_and_digits: "Only letters or digits"
+      incorrect_mail: "Not valid"
+      should_be_different_with_nickname: "Password and nickname should be different"
+      is_using: "Already in use"
+
       accepted: must be accepted
       blank: can't be blank
       present: must be blank

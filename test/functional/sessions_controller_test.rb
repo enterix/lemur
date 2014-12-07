@@ -6,8 +6,8 @@ class SessionsControllerTest < ActionController::TestCase
   test "should get login-page" do
     get :new
     assert_response :success
-    assert_select 'label', I18n.t('activerecord.User.nick')
-    assert_select 'label', I18n.t('activerecord.User.pass')
+    assert_select 'label', I18n.t('activerecord.attributes.user.nick')
+    assert_select 'label', I18n.t('activerecord.attributes.user.pass')
   end
 
   test "should log-in" do

@@ -3,9 +3,9 @@
         <p id="notice"><%= notice %></p>
     <% end %>
 
-    <%= label_tag(:nick, t("activerecord.User.nick")) %>
+    <%= label_tag(:nick, t("activerecord.attributes.user.nick")) %>
     <%= text_field_tag(:nick) %>
-    <%= label_tag(:pass, t("activerecord.User.pass")) %>
+    <%= label_tag(:pass, t("activerecord.attributes.user.pass")) %>
     <%= password_field_tag(:pass) %>
     <%= submit_tag(t("session.log-in")) %>
 <% end %>
