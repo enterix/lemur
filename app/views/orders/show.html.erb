@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Age min:</strong>
+  <%= @order.age_min %>
+</p>
+
+<p>
+  <strong>And max:</strong>
+  <%= @order.and_max %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @order.age %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @order.number %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

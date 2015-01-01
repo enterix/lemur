@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   private
+  def get_user
+    User.find_by id: session[:user_id]
+  end
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end

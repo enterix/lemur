@@ -1,4 +1,6 @@
 Lemur::Application.routes.draw do
+  resources :orders
+
   scope "(:locale)", locale: /en|ru|uk/ do
     resources :users
 
